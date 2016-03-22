@@ -4,6 +4,19 @@ Checks the [availability of Granite Park Chalet](http://www.graniteparkchalet.co
 
 ## Usage
 
+Build a docker container:
+
+```bash
+docker build -t granite-park-chalet .
+```
+Deploy container and run it with API keys for Prowl and Notify my Android. Mount a volume to persist previously found availability so that you only get notified of changes in availability. Then point `PREV_AVAILABILITY_FILE` to a file on that mounted volume. Optionally include `chalet` in the DEBUG variable for debug information.
+
+```bash
+docker run -it --rm -v /Users/bartt/dev/glacier/:/tmp -e DEBUG=chalet -e PREV_AVAILABILITY_FILE=/tmp/prev-availability.json -e PROWL_API_KEY=<your prowl key> -e NMA_API_KEY=<your nma key> granite-park-chalet 
+```
+
+Use `cron` to check periodically for new availability and be notified.
+
 ## ISC License (ISC)
 
 Copyright (c) 2016, Bart Teeuwisse
