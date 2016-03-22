@@ -1,0 +1,22 @@
+{
+  "name": "granite-park-chalet",
+  "version": "1.0.0",
+  "description": "Check for availability in Granite Park Chalet, Aug 1-6",
+  "main": "chalet.js",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "jsdom": "^8.1.0",
+    "nma": "^0.2.2",
+    "node-prowl": "^0.1.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bart Teeuwisse <bart@thecodemill.biz> (https://thecodemill.biz)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bartt/granite-park-chalet.git"
+  },
+  "license": "ISC"
+}
