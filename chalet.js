@@ -99,7 +99,7 @@ jsdom.env(
             newAvailableDays = difference(availableDays, prevAvailableDays);
             if (newAvailableDays.length) {
               notify(newAvailableDays);
-              save(newAvailableDays);
+              save(availableDays);
             } else {
               debug("No new availability, nothing to notify");
             }
